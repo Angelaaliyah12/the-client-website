@@ -3,22 +3,36 @@ body{
 
 }
 .title{
-    width: 30cm;
+    width: 8cm;
   display: block;
   margin: auto;
+  @media (min-width:768px) {
+    width: 20cm;
+  }
 }
 .about{
-text-align: center;
+text-align: left;
+line-break: 1;
+font-size: 16px;
+width: 15cm;
   margin: 0 auto 2rem auto;
   line-height: 1.5;
   color: #555;
+  @media (min-width:768px) {
+    width: 30rem;
+  }
 }
 .container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 30px;               
-  max-width: 900px;         
-  margin: 0 auto 3rem auto; /*top right bottom left*/
+             
+  max-width: 900px;   
+  align-items: center;      
+  margin: 0 auto 3rem auto;
+
+   @media (min-width: 768px) {
+      display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+   gap: 30px;  
+   }
 }
 
 .box{
@@ -27,14 +41,22 @@ display: flex;
   align-items: center; 
 }
 .box img{
+ width: 300px;
+  height: 250px;
+ @media (min-width:425px) {
+  width: 400px;
+  height: 300px;
+ }
+ @media (min-width: 768px){
+ width: 200px;
+ height: 150px;
 
- width: 150px;
-  height: 100px;
- 
-}
-.box h1{
+}}
+
+.box h3{
     font-family: Courier New;
-  font-size: 10px;
+  font-size: 16px;
   margin-bottom: 0.5rem;
+  line-height: 1.4;
  font-weight: lighter;
 }
